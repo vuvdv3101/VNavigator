@@ -5,7 +5,7 @@
 ![Pod License](https://img.shields.io/cocoapods/l/VNavigator.svg?style=flat)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg?style=flat)](https://cocoapods.org)
 
-`VNavigator` is a clean and easy-to-use navigation in SwiftUI.
+`VNavigator` is a clean and easy-to-use navigation in SwiftUI base on UINavigationController in UIKit
 
 ## Installation
 
@@ -18,9 +18,22 @@ pod 'VNavigator'
 ```
 ## Usage
 - Wrap your ContentView with a ```NavigationView```
-- In ContentView implement ```AppNavigator```
+- In ContentView ```AppNavigator```
 ```
 struct ContentView: AppNavigator {
+    var body: some View {
+        Button(action: {
+            navigator.pushToView(view: DetailScreen1())
+        }, label: {
+            Text("Next to Detail Screen")
+        })
+    }
+}
+```
+- Use with ```Environment```
+```
+struct ContentView: View {
+    @Environment (\.navigator) var navigator
     var body: some View {
         Button(action: {
             navigator.pushToView(view: DetailScreen1())
