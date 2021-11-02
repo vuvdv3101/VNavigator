@@ -1,7 +1,6 @@
 # VNavigator
 
-![Pod Version](https://img.shields.io/cocoapods/v/VNavigator.svg?style=flat)
-![Pod Platform](https://img.shields.io/cocoapods/p/VNavigator.svg?style=flat)
+
 ![Pod License](https://img.shields.io/cocoapods/l/VNavigator.svg?style=flat)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg?style=flat)](https://cocoapods.org)
 
