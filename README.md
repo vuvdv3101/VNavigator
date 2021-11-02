@@ -18,7 +18,7 @@ pod 'VNavigator'
 ```
 ## Usage
 - Wrap your ContentView with a ```NavigationView```
-- In ContentView ```AppNavigator```
+- In ContentView implement```AppNavigator```
 ```
 struct ContentView: AppNavigator {
     var body: some View {
@@ -44,17 +44,17 @@ struct ContentView: View {
 }
 ```
 ## Function support like you use with UIKit
-- Push
+- [x] Support push
 ``` navigator.pushToView(view: DetailScreen())```
-- Pop
+- [x] Support pop
 ``` navigator.pop()```
-- Pop to root
+- [x] Support pop to root
 ``` navigator.popToRootView()```
-- Pop
+- [x] Support pop to specific view
 ``` navigator.popToView(DetailScreen.self)```
-- Present
+- [x] Support present with UIKit animation
 ``` navigator.present(DetailScreen()))```
-- Dismiss
+- [x] Support dismiss
 ``` navigator.dismiss()```
 
 ## Requirements
