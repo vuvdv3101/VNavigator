@@ -15,47 +15,39 @@
 ```ruby
 pod 'VNavigator'
 ```
-## Usage
-- Wrap your ContentView with a ```NavigationView```
-- In ContentView implement```AppNavigator```
+- Using ``` Navigator/AppNavigator.swift ``` for Navigation
+- Override AppNavigator:
 ```
-struct ContentView: AppNavigator {
+struct LoginScreen: AppNavigator {
     var body: some View {
-        Button(action: {
-            navigator.pushToView(view: DetailScreen1())
-        }, label: {
-            Text("Next to Detail Screen")
-        })
+        Text("Login")
     }
 }
 ```
-- Use with ```Environment```
+- Change Root(when change root you can not back to old screen)
 ```
-struct ContentView: View {
-    @Environment (\.navigator) var navigator
-    var body: some View {
-        Button(action: {
-            navigator.pushToView(view: DetailScreen1())
-        }, label: {
-            Text("Next to Detail Screen")
-        })
-    }
-}
+ navigator.pushToView(rootView: HomeScreen())
 ```
-## Function support like you use with UIKit
-- [x] Support push
-``` navigator.pushToView(view: DetailScreen())```
-- [x] Support pop
-``` navigator.pop()```
-- [x] Support pop to root
-``` navigator.popToRootView()```
-- [x] Support pop to specific view
-``` navigator.popToView(DetailScreen.self)```
-- [x] Support present with UIKit animation
-``` navigator.present(DetailScreen()))```
-- [x] Support dismiss
-``` navigator.dismiss()```
-
+- Nativate to New Screen
+```
+ navigator.pushToView(view: HomeScreen())
+```
+- Go back
+```
+ navigator.pop()
+```
+- Pop to Root(go to first screen of node)
+```
+ navigator.popToRootView()
+```
+- Present View 
+```
+navigator.presentView(view: HomeScreen())
+```
+- Go back to a screen
+```
+navigator.popToView(HomeScreen.type)
+```
 ## Requirements
 
 + Xcode 12+
