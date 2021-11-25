@@ -26,7 +26,7 @@ struct LoginScreen: AppNavigator {
 ```
 - Change Root(when change root you can not back to old screen)
 ```
- NavigationManager.changeRootView(rootView: TabbarScreen())
+ navigator.changeRootView(rootView: TabbarScreen())
 ```
 - Nativate to New Screen
 ```
