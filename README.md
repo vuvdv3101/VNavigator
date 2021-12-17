@@ -20,7 +20,9 @@ pod 'VNavigator'
 ```
 struct LoginScreen: AppNavigator {
     var body: some View {
-        Text("Login")
+       Button("Login") {
+             navigator.pushToView(view: HomeScreen())
+       }
     }
 }
 ```
