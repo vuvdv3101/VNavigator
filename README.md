@@ -48,7 +48,7 @@ navigator.presentView(view: HomeScreen())
 ```
 - Go back to a screen
 ```
-navigator.popToView(HomeScreen.type)
+navigator.popToView(HomeScreen.self)
 ```
 ## Requirements
 
